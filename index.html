@@ -355,6 +355,28 @@ footer .logo .m{background:rgba(255,255,255,.18)}
 .qform input::placeholder{color:#9d95bb}
 .qresult .re2{font-size:44px;text-align:center}
 .iglink{color:rgba(255,255,255,.85);text-decoration:underline;font-weight:700}
+/* контекстные CTA-полосы — разный дизайн и цвет под секции */
+.ctaband{max-width:860px;margin:clamp(30px,4vw,46px) auto 0;border-radius:24px;padding:clamp(24px,3.2vw,36px);display:flex;flex-direction:column;gap:18px;align-items:center;text-align:center;box-shadow:var(--sh)}
+.ctaband .cbtext{display:flex;flex-direction:column;gap:6px}
+.ctaband .cbt{font-size:clamp(19px,2.3vw,26px);font-weight:900;line-height:1.16}
+.ctaband .cbs{font-size:14.5px;line-height:1.45;font-weight:600;opacity:.94}
+.ctaband .btn{width:100%}
+@media(min-width:760px){.ctaband{flex-direction:row;justify-content:space-between;text-align:left;gap:26px}.ctaband .btn{width:auto;flex:0 0 auto;white-space:nowrap}}
+.cb-orange{background:linear-gradient(135deg,#FFF3E9,#FFE7D3);border:1px solid #FFD9BE}
+.cb-orange .cbt{color:var(--ink)}.cb-orange .cbs{color:#9a6b45}
+.cb-violet{background:var(--pgrad)}
+.cb-violet .cbt{color:#fff}.cb-violet .cbs{color:rgba(255,255,255,.9)}
+.cb-dark{background:linear-gradient(135deg,#2A1F52,#1A1230)}
+.cb-dark .cbt{color:#fff}.cb-dark .cbs{color:rgba(255,255,255,.82)}
+.cb-mint{background:linear-gradient(135deg,#E9FAF2,#D8F2E7);border:1px solid #C4EBD8}
+.cb-mint .cbt{color:#14663f}.cb-mint .cbs{color:#3d8b66}
+.cb-blue{background:linear-gradient(135deg,#EAF3FF,#DAEAFF);border:1px solid #C6DEFF}
+.cb-blue .cbt{color:#1c3f7a}.cb-blue .cbs{color:#4a6ea8}
+.cb-hot{background:var(--ograd);box-shadow:0 20px 44px rgba(255,106,47,.4)}
+.cb-hot .cbt{color:#fff}.cb-hot .cbs{color:rgba(255,255,255,.92)}
+.btn.white{background:#fff;color:var(--violet);box-shadow:0 14px 28px rgba(0,0,0,.16)}
+.btn.glow{animation:glowpulse 1.9s ease-in-out infinite}
+@keyframes glowpulse{0%,100%{box-shadow:0 12px 26px rgba(0,0,0,.18)}50%{box-shadow:0 16px 42px rgba(255,255,255,.6)}}
 </style>
 </head>
 <body>
@@ -420,6 +442,8 @@ footer .logo .m{background:rgba(255,255,255,.18)}
   <div class="swipehint">← листайте карточки →</div>
 </section>
 
+
+<div class="wide"><div class="ctaband cb-orange"><div class="cbtext"><div class="cbt">Дайте ребёнку это будущее уже сейчас</div><div class="cbs">Первый шаг — бесплатный вводный урок. Онлайн, 30 минут, без обязательств.</div></div><a href="#lead" data-cta="lesson" class="btn acc">Записаться на урок</a></div></div>
 <!-- ПОЧЕМУ ОНЛАЙН -->
 <section id="pochemu" class="soft wide">
   <div class="sh"><span class="eye">Онлайн ≠ хуже</span><h2>Почему онлайн, а не кружок рядом с домом</h2><p>Робототехника у нас — руками: 3D-принтер и электроника стоят у ребёнка дома. Только удобнее, прозрачнее и дешевле кружка.</p></div>
@@ -431,6 +455,8 @@ footer .logo .m{background:rgba(255,255,255,.18)}
   <div class="relief"><span class="re">🧘</span><div>Вам не нужно ничего делать: куратор ведёт ребёнка сам и присылает вам отчёты о каждом занятии.</div></div>
 </section>
 
+
+<div class="wide"><div class="ctaband cb-violet"><div class="cbtext"><div class="cbt">Онлайн удобнее кружка — убедитесь сами</div><div class="cbs">Покажем платформу и разберём уровень ребёнка на бесплатном пробном уроке.</div></div><a href="#lead" data-cta="lesson" class="btn white">Записаться на пробный урок</a></div></div>
 <!-- КАК МЫ УЧИМ -->
 <section id="method" class="wide">
   <div class="sh"><span class="eye">Как мы учим</span><h2>Видеоуроки для практики и наставник каждую неделю</h2><p>Ребёнок собирает проекты по понятным видеоурокам в удобное время, а раз в неделю встречается с наставником — закрепить материал и задать вопросы.</p></div>
@@ -456,6 +482,8 @@ footer .logo .m{background:rgba(255,255,255,.18)}
   </div>
 </section>
 
+
+<div class="wide"><div class="ctaband cb-dark"><div class="cbtext"><div class="cbt">Хотите, чтобы ваш ребёнок собрал такое?</div><div class="cbs">Пройдите тест за 1 минуту — подберём программу под возраст и подарим урок.</div></div><a href="#quiz" class="btn acc">Подобрать программу</a></div></div>
 <!-- КАК РАБОТАЕТ + РЕЗУЛЬТАТЫ -->
 <div class="purple">
   <section class="wide">
@@ -575,6 +603,8 @@ footer .logo .m{background:rgba(255,255,255,.18)}
   <div class="swipehint">← листайте отзывы →</div>
 </section>
 
+
+<div class="wide"><div class="ctaband cb-mint"><div class="cbtext"><div class="cbt">Уже 10 000+ семей выбрали нас</div><div class="cbs">Задайте любой вопрос — ответим в WhatsApp в течение 15 минут.</div></div><a href="https://wa.me/77081234955?text=%D0%97%D0%B4%D1%80%D0%B0%D0%B2%D1%81%D1%82%D0%B2%D1%83%D0%B9%D1%82%D0%B5%21%20%D0%A5%D0%BE%D1%87%D1%83%20%D1%83%D0%B7%D0%BD%D0%B0%D1%82%D1%8C%20%D0%BF%D1%80%D0%BE%20%D0%BA%D1%83%D1%80%D1%81%20%D1%80%D0%BE%D0%B1%D0%BE%D1%82%D0%BE%D1%82%D0%B5%D1%85%D0%BD%D0%B8%D0%BA%D0%B8%20%D0%B8%20%D0%B7%D0%B0%D0%BF%D0%B8%D1%81%D0%B0%D1%82%D1%8C%20%D1%80%D0%B5%D0%B1%D1%91%D0%BD%D0%BA%D0%B0." target="_blank" rel="noopener" class="btn wa">Спросить в WhatsApp</a></div></div>
 <!-- КОМАНДА / НАСТАВНИКИ -->
 <section id="team">
   <div class="wide narrow" style="max-width:1160px">
@@ -606,6 +636,8 @@ footer .logo .m{background:rgba(255,255,255,.18)}
   </div>
 </section>
 
+
+<div class="wide"><div class="ctaband cb-blue"><div class="cbtext"><div class="cbt">О нас пишут ведущие медиа страны</div><div class="cbs">Оцените платформу сами — запишитесь на бесплатный вводный урок.</div></div><a href="#lead" data-cta="lesson" class="btn pp">Записаться на урок</a></div></div>
 <!-- ГАРАНТИЯ -->
 <section class="wide">
   <div class="guar"><div class="gi">🛡️</div><div>
@@ -614,6 +646,8 @@ footer .logo .m{background:rgba(255,255,255,.18)}
   </div></div>
 </section>
 
+
+<div class="wide"><div class="ctaband cb-hot"><div class="cbtext"><div class="cbt">Вы ничем не рискуете</div><div class="cbs">Первый вводный урок — бесплатно и без обязательств. Начните сегодня.</div></div><a href="#lead" data-cta="lesson" class="btn white glow">Записаться сейчас</a></div></div>
 <!-- FAQ -->
 <section id="faq" class="wide">
   <div class="sh"><span class="eye">FAQ</span><h2>Частые вопросы</h2></div>
